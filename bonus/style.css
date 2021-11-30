@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html{ /*serve ad avere l'effetto di scrolling da una sezione all'altra */
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.main-container{
+    width: 100%;
+    margin: auto;
+}
+
+nav{
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    z-index: 99; /*mi assicuro che il nav stia sempre posizionato in cima agli altri*/
+}
+
+/*effetto ombreggiatura quando passi il mouse*/
+ul li a:hover{
+    box-shadow: 2px 2px 10px black;
+}
+
+ul li{
+    display: inline;
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+
+
+/* Classe in comune tra tutti i contenitori*/
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/*differenziazione dei colori*/
+.first-shoe{
+    background-color: red;
+}
+.second-shoe{
+    background-color: green;
+}
+.third-shoe{
+    background-color: yellow;
+}
+
+
+/*contenitore delle immagini e i testi*/
+.shoe-info{
+    width: 60%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shoe-info img{
+    width: 75%;
+    margin-left: 40px;
+}
+
+.shoe-info h1{
+    width: 70%;
+    margin-left: 150px;
+    color: yellow;
+    font-size: 38px;
+}
+
+/*cambio colore all'ultimo testo dato che lo sfondo è giallo*/
+.third-shoe .shoe-info h1{
+    color: green;
+}
